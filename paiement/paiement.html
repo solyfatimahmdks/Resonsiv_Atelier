@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+    
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <link rel="stylesheet" href="paiement.css">
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <title>CHECKOUT</title>
+</head>
+<body class="p-0 m-0">
+  <header id="header">
+    <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+        <div class="burger-menu" id="burger">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="icon" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="list-menu list-group" id="list-nav">
+            <a href="#" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">BLOG</a>
+            <a href="#" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+        </div>
+        <script>
+            let menu = document.getElementById('menu');
+            let burger = document.getElementById('burger');
+            let nav = document.getElementById('list-nav');
+            menu.addEventListener('click', function(){
+                burger.style.display = 'block';
+                nav .style.left = "0";
+                this.style.visibility = 'hidden';
+            });
+            burger.addEventListener('click', function(){
+                burger.style.display = 'none';
+                nav.style.left = "-400px";
+                menu.style.visibility = 'visible';
+            });
+        </script>
+        <div class="icon d-flex justify-content-center">
+            <img src="../public/images/logo.png" alt="" class="logo-header w-75">
+        </div>
+        <div class="icon">
+            <div class="position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="notifications"
+                    class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                    12
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="banner d-flex justify-content-center align-items-center flex-column">
+        <h1 class="text-center text-white">CHECK OUT</h1>
+        <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>CHECK OUT</span></p>
+    </div>
+</header>
+    <main class="content bg-secondary-subtle">
+             <div class="paiementcontainer container">
+
+            
+                 <section class="panier-part row">
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-1">
+                          <span>SHOPPING CARD</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc">
+                          <span>WISHLIST</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3">
+                      <div class="component-content py-3 px-5" id="cc-3">
+                          <span>CHECK OUT</span>
+                      </div>
+                  </div>
+                  <div class="panier-component col-lg col-md-6 p-3" id="cc">
+                      <div class="component-content py-3 px-5">
+                          <span>ORDER COMPLET</span>
+                      </div>
+                  </div>
+              </section>
+
+              <form class="was-validated bg-white">
+            
+          
+                             <!-- informations clients -->
+                 <div class="details row d-flex justify-content-evenly mt-5 needs-validation"  novalidate>
+                        <div class="left col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-3 mt-3 fs-5">BILLING DETAILS</h4>
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Your name here...">
+                          </div>                          
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Email address here...">
+                          </div>                           
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Phone here...">
+                          </div>                           
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Company name here...">
+                          </div> 
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">Contry</option>
+                              <option value="1">Bengladesh</option>
+                              <option value="2">United States</option>
+                              <option value="3">United Kingdom</option>
+                              <option value="4">Australia</option>
+                              <option value="5">Canada</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">State</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">Town/City</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <textarea class="form-control bg-secondary-subtle" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter your address.
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="right col-sm-6 col-md-6">
+                          <h4 class="texth4 ms-3 mt-3 fs-5">SHIP TO DIFFERENT ADDRESS</h4>
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Your name here...">
+                          </div>                           
+                          <div class="m-3">
+                            <input type="email" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Email address here...">
+                          </div>                        
+                          <div class="m-3">
+                            <input type="text" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Phone here...">
+                          </div>                           
+                          <div class="m-3">
+                            <input type="text" class="form-control bg-secondary-subtle" id="exampleFormControlInput1" placeholder="Company name here...">
+                          </div> 
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">Contry</option>
+                              <option value="1">Bengladesh</option>
+                              <option value="2">United States</option>
+                              <option value="3">United Kingdom</option>
+                              <option value="4">Australia</option>
+                              <option value="5">Canada</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">State</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <select class="form-select bg-secondary-subtle" required aria-label="select example">
+                              <option value="">Town/City</option>
+                              <option value="1">Dhaka</option>
+                              <option value="2">New York</option>
+                              <option value="3">London</option>
+                              <option value="4">Melbourne</option>
+                              <option value="5">Ottawa</option>
+                            </select>
+                            <div class="invalid-feedback">Please open this select menu</div>
+                          </div>
+                          <div class="m-3">
+                            <textarea class="form-control bg-secondary-subtle" id="validationTextarea" placeholder="Your address here..." required></textarea>
+                            <div class="invalid-feedback">
+                              Please enter your address.
+                            </div>
+                          </div>
+                        </div>
+                 </div>
+
+
+                 <!-- paiement_commandes -->
+                <div class="cardpaiement row d-flex">
+                                    <!-- our order -->
+                          <div class="cardleft col-lg-6 mt-2 p-4 col-sm-6 col-md-6">
+                            <!-- <div class="order-md-last">
+                              
+                            </div> -->
+                              <h4 class="orderhead ms-1 mb-4 fs-5">OUR ORDER</h4>
+                              <div class="card-header shadow-sm d-flex justify-content-between bg-secondary-subtle" style="color: grey;">
+                                <span class="prodhead mt-2 ms-3 shadow-sm">PRODUCT</span>
+                                <p class="tothead mt-2 me-3">TOTAL</p>
+                              </div>
+                              <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                  <div>
+                                    <small class="text-body-secondary">Dummy Product Name x 2</small>
+                                  </div>
+                                    <span class="text-body-secondary">$86.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                  <div>
+                                    <small class="text-body-secondary">Dummy Product Name x 1</small>
+                                  </div>
+                                  <span class="text-body-secondary">$69.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                  <div>
+                                    <small class="text-body-secondary">Cart Subtotal</small>
+                                  </div>
+                                  <span class="text-body-secondary">$155.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                  <div>
+                                    <small class="text-body-secondary">Shipping and Handing</small>
+                                  </div>
+                                  <span class="text-body-secondary">$15.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                  <div>
+                                    <small class="text-body-secondary">Vat</small>
+                                  </div>
+                                  <span class="text-body-secondary">$00.00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between" style="color: #d5887e;">
+                                  <span>Order Total</span>
+                                  <strong>$170.00</strong>
+                                </li>
+                              </ul>
+                      
+                            </div>
+
+                                  <!-- ....debut_cardrightt..... -->
+
+                                  
+                        <div class="cardright col-lg-6 mt-2 p-4 col-sm-6 col-md-6">
+                          <h4 class="orderhead ms-1 mb-4 fs-5">PAYMENT METHOD</h4>
+                          <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  DIRECT BANK TRANSFER
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  CHEQUE PAYMENT
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-secondary-subtle border-2 shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  PAYPAL
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  <div class="payment-content">
+                                    <p>Pay via PayPal; you can pay with your credit card if you don�t have a PayPal account.</p>
+                                    <a href="#"><img src="../public/images/payment/1.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/2.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/3.png" alt="" /></a>
+                                    <a href="#"><img src="../public/images/payment/4.png" alt="" /></a>
+                                  </div>
+                                </div>                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 mt-2">
+                            <button class="btn btn-danger" type="submit">Place Order</button>
+                          </div>
+                      </div>
+                </div>
+              </form>           
+
+            </div>
+
+     </div>
+    </main>
+
+    <footer>
+      <div class="container py-5">
+          <div class="row">
+    <div class="mb-3 col-md-6 col-lg-4">
+      <h5>CONTACT US</h5>
+      <hr>
+      <ul class="nav d-flex" id="inf">
+          <div class="fw-bold" >
+              <p>Address</p>
+              <p class="mt-5">Cell Phone</p>
+              <p>Email</p>
+          </div>
+          <div>
+              <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+              <p class="ms-4 mt-4">012345- 123456789</p>
+              <p class="ms-4 mt-1">your-email@gmail.com</p>
+
+          </div>
+          <div class="d-flex">
+          </div>
+        
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-2">
+      <h5>ACCOUNTS</h5>
+      <hr>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-2">
+      <h5>SHIPPING</h5>
+      <hr>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-4">
+      <form>
+        <h5>Email Newsletters</h5>
+        <hr>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+      </div>
+      <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+      </form>
+    </div>
+          </div>
+         
+      </div>
+      <div  id="bottom">
+          <div class="container">
+              <div class="d-flex flex-column flex-sm-row justify-content-between">
+                  <div>
+                      <p>©Code Carnival 2021.All Rights Reserved</p>
+                      <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                      </ul>
+                  </div>
+                  <div>
+                      <img src="../public/images/payment/1.png" alt="">
+                      <img src="../public/images/payment/2.png" alt="">
+                      <img src="../public/images/payment/3.png" alt="">
+                      <img src="../public/images/payment/4.png" alt="">
+                  </div>
+              </div>
+          </div>
+          </div>
+      
+          <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

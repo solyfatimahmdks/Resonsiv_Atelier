@@ -1,0 +1,24 @@
+#notifications{
+    padding: 2px 3px;
+    font-size: 9px;
+    top: 10%;
+    background-color: var(--brown);
+}
+.logo-header{
+    width: 50px;
+
+}
+header .banner{
+    background: linear-gradient(0deg, #04061b67, #04061b67), url("../public/images/bg/1.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+
+}
+header .root{
+    top: 210px;
+    left: 8%;
+    font-size: 13px;
+}

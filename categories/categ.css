@@ -1,0 +1,27 @@
+main{
+    margin-top: 90px;
+}
+
+.product h5 {
+    margin :0;
+}
+.star .bi-star-fill , .star .bi-star-half , .price{
+    color: var(--brown)!important;
+}
+.product i {
+   background-color: var(--gris-clair)!important;
+}
+.leave-review .fa-star {
+   color: var(--brown) !important;
+}
+#texte{
+    font-size: 13px;
+}
+.addCart{
+    background-color: var(--gris-clair);
+    width: auto;
+    height: auto;
+}
+/* #card-row{
+    display: none;
+} */

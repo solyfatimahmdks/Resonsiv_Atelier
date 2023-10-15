@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fin favicon -->
+    
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Fin bootstrap Icon -->
+    
+    <!-- Fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fin fontawsome -->
+    <!-- <link rel="stylesheet" href="categories.css"> -->
+    <link rel="stylesheet" href="categ.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="../public/style/header-footer.css">
+    <link rel="stylesheet" href="../public/style/couleur.css">
+    <title>CATEGORY</title>
+</head>
+<body class="p-0 m-0">
+  <header id="header">
+    <div class="nav-fixed d-flex justify-content-between align-items-center p-4 fixed-top bg-white">
+        <div class="burger-menu" id="burger">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="icon" id="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="list-menu list-group" id="list-nav">
+          <a href="../accueil/accueil1.html" class="list-solo list-group-item list-group-item-action">ACCUEIL</a>
+          <a href="../produit/produits.html" class="list-solo list-group-item list-group-item-action">PRODUITS</a>
+          <a href="#" class="list-solo list-group-item list-group-item-action">CATEGORIES</a>
+          <a href="../about/about.html" class="list-solo list-group-item list-group-item-action">A PROPOS</a>
+          <a href="#" class="list-solo list-group-item list-group-item-action">ACCESSOIRS</a>
+          <a href="../blog/blog.html" class="list-solo list-group-item list-group-item-action">BLOG</a>
+          <a href="../page_contact/contact/contact.html" class="list-solo list-group-item list-group-item-action">CONTACT</a>
+      </div>
+        <script>
+            let menu = document.getElementById('menu');
+            let burger = document.getElementById('burger');
+            let nav = document.getElementById('list-nav');
+            menu.addEventListener('click', function(){
+                burger.style.display = 'block';
+                nav .style.left = "0";
+                this.style.visibility = 'hidden';
+            });
+            burger.addEventListener('click', function(){
+                burger.style.display = 'none';
+                nav.style.left = "-400px";
+                menu.style.visibility = 'visible';
+            });
+        </script>
+        <div class="icon d-flex justify-content-center">
+            <img src="../public/images/logo.png" alt="" class="logo-header w-75">
+        </div>
+        <div class="icon">
+          <div class="position-relative">
+              <a href="../panier/panier.html" style="color: black;"><i class="fa-solid fa-cart-shopping"></i>
+                <span id="notifications"
+                    class="position-absolute start-100 translate-middle badge rounded-pill  badge-sm">
+                    2
+                </span>
+            </a>
+          </div>
+      </div>
+    </div>
+    <!-- <div class="banner d-flex justify-content-center align-items-center flex-column">
+        <h1 class="text-center text-white">SHOPPING CART</h1>
+        <p class="position-absolute root text-white "><span class="fw-bold">HOME</span> &nbsp; / <span>SHOPPING CARD</span></p>
+    </div> -->
+</header>
+    <main>
+        <div class="categorycontainer bg-secondary-subtle">
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-md-3 mt-5">
+                   <input type="text" class="form-control py-2 rounded-0" placeholder="Search here" aria-label="First name">
+                   <div class="card mt-3">
+                        <div class="card-header" style="color: grey;">CATEGORIES</div>
+                        <div class="card-body">
+                             <h6 class="card-title" style="color: grey;">Chair</h6>
+                             <h6 class="card-titlepara" style="color: #CAA46A;">Fourniture
+                                    <div class="paragraph ms-5 mt-3" style="color: grey;">
+                                        <p>Men Bag</p>
+                                        <p>Shoes</p>
+                                        <p>Watch</p>
+                                        <p>T-shirt</p>
+                                        <p>Shirt</p>
+                                    </div>
+                             </h6>
+                             <h6 class="card-title" style="color: grey;">Accessories</h6>
+                             <h6 class="card-title" style="color: grey;">Top Brands</h6>
+                             <h6 class="card-title" style="color: grey;">Jewelry</h6>
+                             
+                        </div>
+                   </div>
+                   <div class="card mt-3">
+                      <div class="card-header" style="color: grey;">PRICE</div>
+                      <div class="card-body">
+                        <div class="spantext d-flex justify-content-between">
+                          <span class="card-header" style="color: grey;">Your range: </span>
+                          <span class="card-title mt-2" style="color: grey;">$50-$999</span>
+                        </div>
+                         <!-- Double range slider (flat design)  -->
+                         <div class="ranges">
+                          <div class="range"></div>
+                         </div>
+                         
+                     </div>
+                   </div>
+
+                   <div class="card mt-3">
+                       <div class="card-header" style="color: grey;">COLOR</div>
+                       <div class="card-body d-flex justify-content-between">
+                           <div class="color"></div><span class="text me-5 pe-5" style="color: grey;">light Salmon</span><span class="number" style="color: grey;">12</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color1"></div><span class="text me-5 pe-5" style="color: grey;">Dark Salmon</span><span class="number" style="color: grey;">20</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color2"></div><span class="text me-5 pe-5" style="color: grey;">Tomato</span><span class="number" style="color: grey;">59</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color3"></div><span class="text me-5 pe-5" style="color: grey;">Deep Sky Blue</span><span class="number" style="color: grey;">45</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color4"></div><span class="text me-5 pe-5" style="color: grey;">Electric Purple</span><span class="number" style="color: grey;">78</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color5"></div><span class="text me-5 pe-5" style="color: grey;">Atlantis</span><span class="number" style="color: grey;">10</span>
+                       </div>
+                       <div class="card-body d-flex justify-content-between">
+                          <div class="color6"></div><span class="text me-5 pe-5" style="color: grey;">Deep Lilac</span><span class="number" style="color: grey;">15</span>
+                       </div>
+                   </div>
+
+                   <div class="card mt-3">
+                       <div class="card-header" style="color: grey;">SIZE</div>
+                       <div class="card-body d-flex justify-content-evenly">
+                              <div class="size">M</div>
+                              <div class="size">S</div>
+                              <div class="size">L</div>
+                              <div class="size">SL</div>
+                              <div class="size">XL</div>
+                       </div>
+                   </div>
+
+                   <div class="card-header shadow-sm d-flex justify-content-center mb-2 mt-3" style="color: grey;">
+                   <div class="image m-4">
+                       <img src="../public/images/discount/salon-fer.png" alt="">
+                   </div>
+                   
+                  </div>
+
+                   
+
+
+                </div>
+                <div class="col-md-8 mt-5">
+                  <div class="row bg-white py-2">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          
+                          <i class="bi bi-grid-3x2-gap-fill me-1" style="color: #caa46a;" id="column"></i>
+                          <i class="fa-solid fa-list" style="color: grey;" id="row"></i>
+
+                        </div>
+                        <div>
+                          <span>Showing 01-09 of 17 Results</span>
+                        </div>
+
+                      </div>
+                  </div>
+                  <div id="card-row" class="d-none">
+                    <div class="row mt-3">
+                      <div class="card mb-3 rounded-0">
+                        <div class="row g-0">
+                          <div class="col-md-4 ">
+                            <img src="../public/images/product/6.jpg" class="img-fluid my-3" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body" id="product">
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-title">DUMMY PRODUCT NAME</h6>
+                                <div class="star">
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <span>(27 Ratings)</span>
+                                </div>
+                              </div>
+                              <div class="price fs-5 fw-bold mb-2">
+                                $ &nbsp;56.20
+                              </div>
+                              <div id="texte" class="my-4">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration 
+                                in some form, by injected humour, or randomised words which donot look even slightly believable. If you are 
+                                going to use a passage of Lorem Ipsum, you neede be sure there isn't anythin going to use a passage embarrassing.
+                              </div>
+                              
+                              <div class="row mb-3">
+                                <div class="col-4  addCart ms-2 px-2">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <i class="fa-solid fa-minus "></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <span>02</span>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-1"></div> -->
+                                <div class="col-4  addCart ms-3" id="icons-bottom">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-brands fa-searchengin"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="bi bi-cart-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-3"></div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="card mb-3 rounded-0">
+                        <div class="row g-0">
+                          <div class="col-md-4 ">
+                            <img src="../public/images/product/6.jpg" class="img-fluid my-3" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body" id="product">
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-title">DUMMY PRODUCT NAME</h6>
+                                <div class="star">
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <span>(27 Ratings)</span>
+                                </div>
+                              </div>
+                              <div class="price fs-5 fw-bold mb-2">
+                                $ &nbsp;56.20
+                              </div>
+                              <div id="texte" class="my-4">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration 
+                                in some form, by injected humour, or randomised words which donot look even slightly believable. If you are 
+                                going to use a passage of Lorem Ipsum, you neede be sure there isn't anythin going to use a passage embarrassing.
+                              </div>
+                              
+                              <div class="row mb-3">
+                                <div class="col-4  addCart ms-2 px-2">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <i class="fa-solid fa-minus "></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <span>02</span>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-1"></div> -->
+                                <div class="col-4  addCart ms-3" id="icons-bottom">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-brands fa-searchengin"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="bi bi-cart-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-3"></div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="card mb-3 rounded-0">
+                        <div class="row g-0">
+                          <div class="col-md-4 ">
+                            <img src="../public/images/product/6.jpg" class="img-fluid my-3" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body" id="product">
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-title">DUMMY PRODUCT NAME</h6>
+                                <div class="star">
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <span>(27 Ratings)</span>
+                                </div>
+                              </div>
+                              <div class="price fs-5 fw-bold mb-2">
+                                $ &nbsp;56.20
+                              </div>
+                              <div id="texte" class="my-4">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration 
+                                in some form, by injected humour, or randomised words which donot look even slightly believable. If you are 
+                                going to use a passage of Lorem Ipsum, you neede be sure there isn't anythin going to use a passage embarrassing.
+                              </div>
+                              
+                              <div class="row mb-3">
+                                <div class="col-4  addCart ms-2 px-2">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <i class="fa-solid fa-minus "></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <span>02</span>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-1"></div> -->
+                                <div class="col-4  addCart ms-3" id="icons-bottom">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-brands fa-searchengin"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="bi bi-cart-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-3"></div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="card mb-3 rounded-0">
+                        <div class="row g-0">
+                          <div class="col-md-4 ">
+                            <img src="../public/images/product/6.jpg" class="img-fluid my-3" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body" id="product">
+                              <div class="d-flex justify-content-between mb-2">
+                                <h6 class="card-title">DUMMY PRODUCT NAME</h6>
+                                <div class="star">
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-fill"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <i class="bi bi-star-half"></i>
+                                  <span>(27 Ratings)</span>
+                                </div>
+                              </div>
+                              <div class="price fs-5 fw-bold mb-2">
+                                $ &nbsp;56.20
+                              </div>
+                              <div id="texte" class="my-4">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have be suffered alteration 
+                                in some form, by injected humour, or randomised words which donot look even slightly believable. If you are 
+                                going to use a passage of Lorem Ipsum, you neede be sure there isn't anythin going to use a passage embarrassing.
+                              </div>
+                              
+                              <div class="row mb-3">
+                                <div class="col-4  addCart ms-2 px-2">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <i class="fa-solid fa-minus "></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-3 text-center">
+                                      <span>02</span>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="fa-solid fa-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-1"></div> -->
+                                <div class="col-4  addCart ms-3" id="icons-bottom">
+                                  <div class="d-flex p-1 justify-content-center">
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-brands fa-searchengin"></i>
+                                    </div>
+                                    <div class="border-end border-dark-subtle px-4 text-center">
+                                      <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div class="px-4 text-center">
+                                      <i class="bi bi-cart-plus"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- <div class="col-3"></div> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-2 mb-4">
+                      <div class="d-flex justify-content-center bg-white px-2 text-center" id="pagination">
+                        <div>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div>
+                            <ul class="nav">
+                              <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">01</a></li>
+                              <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">02</a></li>
+                              <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">03</a></li>
+                              <li class="nav-item mx-2"><a href="#" class="nav-link p-0 text-body-secondary">04</a></li>
+        
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+        
+                    </div>
+                    </div>
+                  </div>
+                  <div id="card-column">
+                    <div class="card-group">
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/6.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
+                          <!-- <p class="new-para" style="color: #d5887e;">$56.20</p> -->
+                          <div class="price fs-5 fw-bold mb-2">
+                            $ &nbsp;56.20
+                          </div>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/3.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge bg-danger-subtle fs-6">Sale</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                            </div>
+                      </div>
+                      <div class="card mt-2 me-2">
+                        <div class="image m-3"><img src="../public/images/product/7.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card-group">
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/10.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge bg-danger-subtle text-bg-danger fs-6">Sale</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/8.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <!-- <span class="badge text-bg-warning-subtle fs-6 text-white">New</span> -->
+                          <p class="new-paraprim" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                      <div class="card mt-2 me-2">
+                        <div class="image m-3"><img src="../public/images/product/11.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card-group">
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/2.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>                          </div>
+                      </div>
+                      <div class="card mt-2 me-5">
+                        <div class="image m-3"><img src="../public/images/product/1.jpg" class="card-img-top" alt="..."></div>
+                        <div class="new position-absolute" style="color: grey;">
+                          <!-- <span class="badge text-bg-warning-subtle fs-6 text-white">New</span> -->
+                          <p class="new-paraprim" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mt-2 me-2">
+                        <a href="../detail-produit/detail.html">
+                          <div class="image m-3"><img src="../public/images/product/12.jpg" class="card-img-top" alt="..."></div>
+                        </a>
+                        <div class="new position-absolute" style="color: grey;">
+                          <span class="badge text-bg-warning-subtle fs-6 text-white">New</span>
+                          <p class="new-para" style="color: #d5887e;">$56.20</p>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title d-flex justify-content-center" style="color: grey;">DEMI PRODUCT NAME</h5>
+                          <div class="card-note d-flex justify-content-center">
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-fill" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                            <i class="bi bi-star-half" style="color: #d5887e;"></i>
+                          </div>
+                          <div class="card-like bg-secondary-subtle mt-4">
+                            <ul class="notes d-flex justify-content-between me-4 pb-1">
+                              <li><i class="bi bi-heart me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-search me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-arrow-repeat me-3" style="color: grey;"></i><span>|</span></li>
+                              <li><i class="bi bi-cart-plus me-3" style="color: grey;"></i></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="pagination">
+                    <nav data-pagination>
+                      <a href=# disabled><i class="bi bi-arrow-left" style="color: grey;"></i></a>
+                      <ul>
+                        <li><a href=#1>01</a>
+                        <li><a href=#2>02</a>
+                        <li><a href=#3>03</a>
+                        <li><a href=#4>04</a>
+                        <li><a href=#5>05</a>
+                        
+                      </ul>
+                      <a href=#2><i class="bi bi-arrow-right" style="color: grey;"></i></a>
+                    </nav>
+                  </div>
+              </div>
+                  </div>
+
+                </div>
+
+                
+        </div>
+   </main>
+    <!-- </li> -->
+    
+    <footer>
+      <div class="container py-5">
+          <div class="row">
+    <div class="mb-3 col-md-6 col-lg-4">
+      <h5>CONTACT US</h5>
+      <hr>
+      <ul class="nav d-flex" id="inf">
+          <div class="fw-bold" >
+              <p>Address</p>
+              <p class="mt-5">Cell Phone</p>
+              <p>Email</p>
+          </div>
+          <div>
+              <p class="ms-4">28 Green Tower,Street Name,<br>New York City,USA</p>
+              <p class="ms-4 mt-4">012345- 123456789</p>
+              <p class="ms-4 mt-1">your-email@gmail.com</p>
+
+          </div>
+          <div class="d-flex">
+          </div>
+        
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-2">
+      <h5>ACCOUNTS</h5>
+      <hr>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Account</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Wishlist</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>My Cart</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Sign in</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Check out</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-2">
+      <h5>SHIPPING</h5>
+      <hr>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>New Products</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Top Sellers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Manufacturers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Suppliers</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"><i class="fa-regular fa-circle-dot me-2"></i>Specials</a></li>
+      </ul>
+    </div>
+
+    <div class="mb-3 col-md-6 col-lg-4">
+      <form>
+        <h5>Email Newsletters</h5>
+        <hr>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+      </div>
+      <button class="btn bg-white my-2 fw-bold" type="button" id="subscribe">Subscribe</button>
+      </form>
+    </div>
+          </div>
+         
+      </div>
+      <div  id="bottom">
+          <div class="container">
+              <div class="d-flex flex-column flex-sm-row justify-content-between">
+                  <div>
+                      <p>©Code Carnival 2021.All Rights Reserved</p>
+                      <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                      </ul>
+                  </div>
+                  <div>
+                      <img src="../public/images/payment/1.png" alt="">
+                      <img src="../public/images/payment/2.png" alt="">
+                      <img src="../public/images/payment/3.png" alt="">
+                      <img src="../public/images/payment/4.png" alt="">
+                  </div>
+              </div>
+          </div>
+          </div>
+      
+          <!-- <a class="position-absolute bottom-25 end-25 bg-danger" href="#header">yo</a> -->
+  </footer>
+  <script src="script.js"></script>
+</body>
